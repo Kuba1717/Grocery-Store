@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainAdminWindow" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sklep.controller.AdminController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0">
+          <children>
+              <TableView fx:id="productsTableView" layoutX="40.0" layoutY="50.0" prefHeight="300.0" prefWidth="720.0">
+                  <!-- Define TableColumns -->
+                  <columns>
+                      <TableColumn fx:id="productNameColumn" prefWidth="150.0" text="Product Name" />
+                      <TableColumn fx:id="expirationDateColumn" prefWidth="150.0" text="Expiration Date" />
+                      <TableColumn fx:id="categoryColumn" prefWidth="150.0" text="Category" />
+                      <TableColumn fx:id="quantityColumn" prefWidth="150.0" text="Quantity" />
+                      <TableColumn fx:id="deleteColumn" prefWidth="100.0" text="Delete" />
+                  </columns>
+              </TableView>
+              <Button fx:id="button_modifySchedule" layoutX="400.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#handleModifySchedule" prefHeight="30.0" prefWidth="150.0" text="Modify Schedule" />
+              <Button fx:id="button_logout" layoutX="706.0" layoutY="556.0" mnemonicParsing="false" onMouseClicked="#handleLogout" prefHeight="30.0" prefWidth="80.0" text="Logout" />
+              <Button fx:id="button_addSeller" layoutX="40.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#handleAddSeller" prefHeight="30.0" prefWidth="150.0" text="Add Seller" />
+              <Button fx:id="button_addProduct" layoutX="220.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#handleAddProduct" prefHeight="30.0" prefWidth="150.0" text="Add Product" />
+            <Label fx:id="label_name" layoutX="40.0" layoutY="14.0" prefHeight="30.0" prefWidth="534.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Button fx:id="button_remanent" layoutX="574.0" layoutY="369.0" mnemonicParsing="false" onMouseClicked="#handleRemanent" prefHeight="32.0" prefWidth="149.0" text="Remanent " />
+            <Button fx:id="button_refresh" layoutX="41.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#handleRefreshButton" prefHeight="31.0" prefWidth="148.0" text="Refresh" />
+      
+          </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sklep.controller.SellerController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0">
+          <children>
+              <Label fx:id="label_name" layoutX="45.0" layoutY="14.0" prefHeight="27.0" prefWidth="562.0">
+                  <font>
+                      <Font name="System Bold" size="18.0" />
+                  </font>
+              </Label>
+      
+              <!-- Add Seller Information Section -->
+              <Label layoutX="40.0" layoutY="50.0" text="Seller Information:" />
+              <Label layoutX="40.0" layoutY="80.0" text="Username: {sellerUsername}" />
+              <Label layoutX="40.0" layoutY="110.0" text="Name: {sellerName}" />
+              <!-- Add more information labels as needed -->
+      
+              <TableView fx:id="productsTableView" layoutX="40.0" layoutY="50.0" prefHeight="235.0" prefWidth="720.0">
+                  <!-- Define TableColumns -->
+                  <columns>
+                      <TableColumn fx:id="productNameColumn" prefWidth="105.0" text="Product Name" />
+                      <TableColumn fx:id="expirationDateColumn" prefWidth="110.0" text="Expiration Date" />
+                  <TableColumn fx:id="categoryColumn" prefWidth="110.0" text="Category" />
+                  <TableColumn fx:id="quantityColumn" prefWidth="110.0" text="Quantity" />
+                  <TableColumn fx:id="updateColumn" prefWidth="110.0" text="Update" />
+                      <!-- Add more columns as needed -->
+                  </columns>
+              </TableView>
+      
+              <Button fx:id="button_logout" layoutX="706.0" layoutY="556.0" mnemonicParsing="false" onMouseClicked="#handleLogout" prefHeight="30.0" prefWidth="80.0" text="Logout" />
+      
+              <Label fx:id="sellerStatusLabel" layoutX="230.0" layoutY="460.0" textFill="#ff0000" />
+            <TableView fx:id="expiredProductsTableView" layoutX="42.0" layoutY="323.0" prefHeight="212.0" prefWidth="439.0">
+               <columns>
+                  <TableColumn fx:id="productNameColumnExpired" prefWidth="105.0" text="Product Name" />
+                  <TableColumn fx:id="categoryColumnExpired" prefWidth="110.0" text="Category" />
+                  <TableColumn fx:id="quantityColumnExpired" prefWidth="110.0" text="Quantity" />
+                  <TableColumn fx:id="deleteColumnExpired" prefWidth="110.0" text="Delete" />
+               </columns>
+            </TableView>
+            <TableView fx:id="scheduleTableView" layoutX="491.0" layoutY="323.0" prefHeight="213.0" prefWidth="277.0">
+              <columns>
+                <TableColumn fx:id="dayScheduleColumn" prefWidth="75.0" text="Day" />
+                <TableColumn fx:id="startScheduleColumn" prefWidth="75.0" text="Start" />
+                  <TableColumn fx:id="endScheduleColumn" prefWidth="75.0" text="End" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label layoutX="491.0" layoutY="296.0" text="Your schedule:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+          </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

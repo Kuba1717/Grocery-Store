@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sklep.controller.ScheduleModifyController">
+   <children>
+      <Label fx:id="texts" layoutX="20.0" layoutY="17.0" prefHeight="17.0" prefWidth="309.0" text="Manage schedules">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TableView fx:id="scheduleTableView" layoutX="219.0" layoutY="67.0" prefHeight="213.0" prefWidth="352.0">
+        <columns>
+          <TableColumn fx:id="dayScheduleColumn" prefWidth="231.0" text="Day" />
+          <TableColumn fx:id="startScheduleColumn" prefWidth="58.0" text="Start" />
+            <TableColumn fx:id="endScheduleColumn" prefWidth="58.0" text="End" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="219.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleDeleteSchedule" text="Delete" />
+      <VBox layoutX="20.0" layoutY="51.0" prefHeight="109.0" prefWidth="145.0">
+         <children>
+            <Label text="select employee">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="userChoiceBox" prefWidth="150.0" />
+            <Label text="    " />
+            <Button fx:id="filterButton" mnemonicParsing="false" onAction="#handleFilterSchedule" text="Filter" />
+         </children>
+      </VBox>
+      <VBox layoutX="23.0" layoutY="180.0" prefHeight="200.0" prefWidth="139.0">
+         <children>
+            <Label text="Add schedule">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="select date">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dayOfWeekField" prefHeight="25.0" prefWidth="149.0" />
+            <Label text="enter start time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="startTimeField" prefHeight="25.0" prefWidth="202.0" promptText="09:00" />
+            <Label text="enter an end time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="endTimeField" promptText="15:30" />
+            <Label text=" ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddSchedule" text="Add" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

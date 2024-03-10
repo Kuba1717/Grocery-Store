@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TableView?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sklep.controller.OrderController">
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Add Product">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="53.0" text="Product Name:" />
+        <TextField fx:id="productNameField" layoutX="128.0" layoutY="49.0" prefWidth="242.0" />
+        <Label layoutX="14.0" layoutY="89.0" text="Expiration Date:" />
+        <DatePicker fx:id="expirationDatePicker" layoutX="128.0" layoutY="85.0" prefWidth="242.0" />
+        <Label layoutX="14.0" layoutY="125.0" text="Category:" />
+        <TextField fx:id="categoryField" layoutX="128.0" layoutY="121.0" prefWidth="242.0" />
+        <Label layoutX="14.0" layoutY="161.0" text="Quantity:" />
+        <TextField fx:id="quantityField" layoutX="128.0" layoutY="157.0" prefWidth="242.0" />
+        <Button fx:id="addProductButton" layoutX="163.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleAddProduct" text="Add Product" />
+        <TableView fx:id="orderedProductsTable" layoutX="14.0" layoutY="250.0" prefHeight="134.0" prefWidth="572.0" />
+
+    </children>
+</AnchorPane>
